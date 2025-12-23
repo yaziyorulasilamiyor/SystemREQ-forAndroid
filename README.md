@@ -21,6 +21,18 @@ Android cihaz özelliklerine göre oyun/uygulama sistem gereksinimi uygunluk kon
 - AppListActivity: SQLite kayıtlarını listeler ve uygunluk sonucunu gösterir
 - AddAppActivity: Yeni kayıt ekleme ekranı
 
+## Ekran Görüntüleri
+
+### Cihaz Bilgileri
+![Main](screenshots/main.png)
+
+### Katalog / Uygunluk Sonuçları
+![List](screenshots/list.png)
+
+### Yeni Kayıt Ekle
+![Add](screenshots/add.png)
+
+
 ## Çalıştırma
 1. Android Studio ile projeyi aç
 2. Run ▶️ ile emulator veya telefon üzerinde çalıştır
