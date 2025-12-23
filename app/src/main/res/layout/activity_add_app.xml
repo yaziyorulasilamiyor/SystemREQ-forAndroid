@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yeni Oyun/Uygulama Ekle"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="İsim"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/etMinSdk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Min Android SDK (örn 21, 23)"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/etMinRam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Min RAM (MB)"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/etMinStorage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Min Boş Alan (MB)"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kaydet"
+            android:layout_marginTop="12dp" />
+
+    </LinearLayout>
+</ScrollView>

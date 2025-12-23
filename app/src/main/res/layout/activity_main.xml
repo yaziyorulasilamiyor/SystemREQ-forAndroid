@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cihazım"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvSdk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Android (SDK): -" />
+
+    <TextView
+        android:id="@+id/tvRam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Toplam RAM: -" />
+
+    <TextView
+        android:id="@+id/tvStorage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Boş Depolama: -" />
+
+    <Button
+        android:id="@+id/btnGo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Uygunluk Kontrolü"
+        android:layout_marginTop="18dp" />
+
+</LinearLayout>

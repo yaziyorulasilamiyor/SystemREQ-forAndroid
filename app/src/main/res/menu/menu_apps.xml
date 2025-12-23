@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_add"
+        android:title="Ekle"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_seed"
+        android:title="Örnek Veri Yükle"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_clear"
+        android:title="Tümünü Sil"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_about"
+        android:title="Hakkında"
+        app:showAsAction="never" />
+</menu>
