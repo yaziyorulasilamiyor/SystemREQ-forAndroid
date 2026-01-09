@@ -1,6 +1,7 @@
 # SystemREQ (Android)
 
-Android cihaz özelliklerine göre oyun/uygulama sistem gereksinimi uygunluk kontrolü yapan basit Android uygulaması.
+Android cihaz özelliklerine göre uygulama/oyun sistem gereksinimi uygunluk kontrolü yapan basit bir demo/prototip.
+
 
 ## Özellikler
 - Cihaz bilgilerini gösterir (Android SDK, RAM, boş depolama)
@@ -36,3 +37,23 @@ Android cihaz özelliklerine göre oyun/uygulama sistem gereksinimi uygunluk kon
 ## Çalıştırma
 1. Android Studio ile projeyi aç
 2. Run ▶️ ile emulator veya telefon üzerinde çalıştır
+
+3. ## Eklenecekler (Roadmap)
+- **API entegrasyonu (otomatik katalog):**
+  - Oyun/uygulama gereksinimlerini tek tek elle girmek yerine bir API üzerinden otomatik çekme
+  - Kategori/arama/filtreleme (örn. FPS, RPG, araçlar, sosyal medya vb.)
+  - Offline kullanım için cache + son senkron zamanı bilgisi
+
+- **UI/UX geliştirmeleri (görünüş & kullanım kolaylığı):**
+  - Daha modern ekran tasarımı (Material Design bileşenleri, daha temiz tipografi/boşluk)
+  - Durumlara göre net görsel geri bildirim (Uygun / Sınırda / Uygun Değil için badge/ikon/renk)
+  - Liste ekranında kart görünümü, arama çubuğu ve sıralama (RAM/Depolama/SDK’ya göre)
+
+- **Gelişmiş uygunluk değerlendirmesi:**
+  - “Sınırda” eşiğini kullanıcı ayarlayabilsin (örn. %10 tolerans)
+  - Gereksinimlere ek alanlar: CPU mimarisi, GPU/GL ES, ekran çözünürlüğü, Android sürümü
+
+- **Kalite & sürdürülebilirlik:**
+  - Basit testler ve hata durumlarında kullanıcıya düzgün mesajlar
+  - README’ye kısa demo video/gif ekleme
+
