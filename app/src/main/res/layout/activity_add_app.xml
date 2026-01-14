@@ -1,66 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/arkaplan">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="20dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Yeni Oyun/Uygulama Ekle"
             android:textStyle="bold"
-            android:textSize="18sp" />
+            android:textSize="20sp"
+            android:textColor="@color/title_text"
+            android:paddingBottom="12dp" />
 
-        <EditText
-            android:id="@+id/etName"
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="İsim"
-            android:minHeight="48dp"
-            android:padding="12dp"
-            android:layout_marginTop="8dp"/>
+            app:cardCornerRadius="18dp"
+            app:cardElevation="2dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="@color/card_bg">
 
-        <EditText
-            android:id="@+id/etMinSdk"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Min Android SDK (örn 21, 23)"
-            android:inputType="number"
-            android:minHeight="48dp"
-            android:padding="12dp"
-            android:layout_marginTop="8dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-        <EditText
-            android:id="@+id/etMinRam"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Min RAM (MB)"
-            android:inputType="number"
-            android:minHeight="48dp"
-            android:padding="12dp"
-            android:layout_marginTop="8dp"/>
+                <!-- İsim -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="İsim"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusTopStart="14dp"
+                    app:boxCornerRadiusTopEnd="14dp"
+                    app:boxCornerRadiusBottomStart="14dp"
+                    app:boxCornerRadiusBottomEnd="14dp"
+                    app:hintTextColor="@color/hint_text"
+                    app:boxStrokeColor="@color/stroke"
+                    app:boxStrokeErrorColor="@color/stroke_error"
+                    app:errorTextColor="@color/stroke_error"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="clear_text">
 
-        <EditText
-            android:id="@+id/etMinStorage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Min Boş Alan (MB)"
-            android:inputType="number"
-            android:minHeight="48dp"
-            android:padding="12dp"
-            android:layout_marginTop="8dp"/>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/body_text"
+                        android:textSize="15sp"
+                        android:minHeight="56dp"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="16dp" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/btnSave"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Kaydet"
-            android:layout_marginTop="12dp" />
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <!-- Min SDK -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Min Android SDK"
+                    app:helperText="Örn: 21, 23"
+                    app:helperTextTextColor="@color/helper_text"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusTopStart="14dp"
+                    app:boxCornerRadiusTopEnd="14dp"
+                    app:boxCornerRadiusBottomStart="14dp"
+                    app:boxCornerRadiusBottomEnd="14dp"
+                    app:hintTextColor="@color/hint_text"
+                    app:boxStrokeColor="@color/stroke"
+                    app:boxStrokeErrorColor="@color/stroke_error"
+                    app:errorTextColor="@color/stroke_error"
+                    app:boxStrokeWidthFocused="2dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etMinSdk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:textColor="@color/body_text"
+                        android:textSize="15sp"
+                        android:minHeight="56dp"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="16dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <!-- Min RAM -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Min RAM (MB)"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusTopStart="14dp"
+                    app:boxCornerRadiusTopEnd="14dp"
+                    app:boxCornerRadiusBottomStart="14dp"
+                    app:boxCornerRadiusBottomEnd="14dp"
+                    app:hintTextColor="@color/hint_text"
+                    app:boxStrokeColor="@color/stroke"
+                    app:boxStrokeErrorColor="@color/stroke_error"
+                    app:errorTextColor="@color/stroke_error"
+                    app:boxStrokeWidthFocused="2dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etMinRam"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:textColor="@color/body_text"
+                        android:textSize="15sp"
+                        android:minHeight="56dp"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="16dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <!-- Min Storage -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Min Boş Alan (MB)"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusTopStart="14dp"
+                    app:boxCornerRadiusTopEnd="14dp"
+                    app:boxCornerRadiusBottomStart="14dp"
+                    app:boxCornerRadiusBottomEnd="14dp"
+                    app:hintTextColor="@color/hint_text"
+                    app:boxStrokeColor="@color/stroke"
+                    app:boxStrokeErrorColor="@color/stroke_error"
+                    app:errorTextColor="@color/stroke_error"
+                    app:boxStrokeWidthFocused="2dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etMinStorage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:textColor="@color/body_text"
+                        android:textSize="15sp"
+                        android:minHeight="56dp"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="16dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="Kaydet"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    app:cornerRadius="16dp"
+                    android:textColor="@color/button_text"
+                    android:backgroundTint="@color/button_bg" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
 </ScrollView>

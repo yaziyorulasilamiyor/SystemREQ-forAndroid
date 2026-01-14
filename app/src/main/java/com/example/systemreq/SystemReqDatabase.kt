@@ -68,7 +68,7 @@ class AppDbHelper(context: Context) : SQLiteOpenHelper(context, "apps.db", null,
     }
 
     fun seedDemoData() {
-        // demo diye 3-4 kayıt bas (boşsa bas)
+
         val c = readableDatabase.rawQuery("SELECT COUNT(*) FROM apps", null)
         val count = c.use { it.moveToFirst(); it.getInt(0) }
         if (count > 0) return

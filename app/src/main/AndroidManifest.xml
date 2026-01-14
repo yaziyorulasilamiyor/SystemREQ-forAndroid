@@ -24,8 +24,9 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".AppListActivity" />
-        <activity android:name=".AddAppActivity" />
+        <activity android:name=".KatalogActivity" />
+        <activity android:name=".UygulamaEkleActivity" />
+        <activity android:name=".KatalogDetayActivity" />
     </application>
 
 </manifest>

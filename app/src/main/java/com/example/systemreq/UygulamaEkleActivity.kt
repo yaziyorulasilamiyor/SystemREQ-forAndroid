@@ -4,10 +4,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.systemreq.AppDbHelper
-import com.example.systemreq.R
 
-class AddAppActivity : AppCompatActivity() {
+class UygulamaEkleActivity : AppCompatActivity() {
 
     private lateinit var db: AppDbHelper
 

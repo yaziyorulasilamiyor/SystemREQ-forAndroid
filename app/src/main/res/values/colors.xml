@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="ana">#836953</color>
+    <color name="anahat">#655446</color>
+    <color name="vurgular">#F59E0B</color>
+    <color name="arkaplan">#BC8F8F</color>
+    <color name="anaYazı">#ede8d0</color>
+    <color name="ikincilYazı">#8fbcbc</color>
+    <color name="editText">#808000</color>
+    <color name="cream">#fffdd0</color>
+    <color name="darker">#878672</color>
+    <color name="beije">#EDE8D0</color>
+    <color name="arkaplan2">#C9A3A3</color>
+    <color name="card_bg">#E7C7C7</color>
+    <color name="title_text">#3E2723</color>
+    <color name="helper_text">#6D4C41</color>
+    <color name="button_bg">#7A5D4A</color>
+    <color name="button_text">#FFFFFF</color>
+    <color name="hint_text">#6D4C41</color>
+    <color name="stroke">#8D6E63</color>
+    <color name="stroke_error">#B00020</color>
+    <color name="body_text">#3E2723</color>
+    <color name="result_bg">#D7C1AE</color>
+    <color name="result_text">#3E2723</color>
+
 </resources>
