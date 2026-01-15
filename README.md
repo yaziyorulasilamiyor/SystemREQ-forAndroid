@@ -1,59 +1,108 @@
-# SystemREQ (Android)
+> **SystemREQ** is an Android demo application that analyzes device specifications
+> (Android SDK, RAM, and available storage) to determine whether a game or application
+> can run on a given device.
+>
+> This project is currently in a **demo/prototype stage** and focuses on system
+> requirement analysis and future recommendation ideas rather than being a
+> production-ready app.
 
-Android cihaz özelliklerine göre uygulama/oyun sistem gereksinimi uygunluk kontrolü yapan basit bir demo/prototip.
+
+**SystemREQ**, Android cihazınızın sistem bilgilerini (SDK, RAM, boş depolama alanı) alarak,
+yüklemek istediğiniz uygulama veya oyunların **cihazınızda çalışıp çalışmayacağını**
+kontrol eden bir **demo/prototip Android uygulamasıdır**.
 
 
-## Özellikler
-- Cihaz bilgilerini gösterir (Android SDK, RAM, boş depolama)
-- SQLite üzerinde oyun/uygulama gereksinimlerini saklar (ekle/listele)
-- Katalog ekranında sonuç üretir: Uygun / Sınırda / Uygun Değil
-- Options Menu ile ek fonksiyonlar (Ekle, Örnek Veri Yükle, Hakkında)
+> Proje şu an demo sürümündedir. Fikir olarak kapsamlı ve geliştirilmeye açıktır,
+ancak henüz tüm hedeflenen özellikleri barındırmamaktadır.
 
-## Kullanılan Teknolojiler
+---
+
+## 🎯 Çıkış Amacı
+
+Zamanla artan oyun ve uygulama sistem gereksinimleri, özellikle orta ve alt segment
+cihazlarda kullanıcı deneyimini ciddi şekilde zorlamaya başladı.
+
+SystemREQ’in çıkış noktası tam olarak bu problemdir.
+
+Uygulamanın uzun vadeli hedefi:
+- Oynamak istediğiniz ancak cihazınızın zorlandığı oyunlara **benzer deneyim sunan muadil uygulamaları** önermek
+- Cihazınızda kalan **boş depolama alanına uygun** oyun ve uygulamaları filtreleyerek göstermek
+- Kullanıcıların tercih ettiği oyun türlerine göre **önerilen indirmeler** sunmak
+- Popüler uygulamaların gölgesinde kalmış, ancak kaliteli olan uygulamaları
+  **kullanıcıyla buluşturmak**
+
+Bu yönüyle SystemREQ, zamanla küçük bir **Google Play istemcisi** gibi davranmayı hedeflemektedir.
+
+İlerleyen aşamalarda:
+- Oyun ve uygulama gereksinimlerinin manuel girilmesi yerine,
+  **harici API’ler üzerinden otomatik olarak çekilmesi**
+- Bu verilerin kullanıcı cihazı ile karşılaştırılarak
+  **anında uygunluk, alternatif ve öneri üretmesi**
+
+amaçlanmaktadır.
+
+---
+
+## ✨ Özellikler (Mevcut)
+
+- Android cihaz sistem bilgilerini alma (SDK, RAM, boş depolama)
+- SQLite üzerinde uygulama/oyun gereksinimlerini saklama
+- Katalog ekranında uygunluk sonucu üretme:
+  - Uygun
+  - Sınırda
+  - Uygun Değil
+- Yeni uygulama/oyun ekleme
+- Options Menu ile ek işlemler (örnek veri yükleme, temizleme, hakkında)
+- Minimal ve sade bir arayüz (v2)
+
+---
+
+## 🧱 Kullanılan Teknolojiler
+
 - Kotlin
 - Android Studio
 - SQLite (SQLiteOpenHelper)
 - XML UI
-- Activity, Intent, Options Menu
-- ListView + ArrayAdapter
+- Activity & Intent yapısı
+- ListView + Custom Adapter
 
-## Ekranlar
-- MainActivity: Cihaz bilgilerini gösterir
-- AppListActivity: SQLite kayıtlarını listeler ve uygunluk sonucunu gösterir
-- AddAppActivity: Yeni kayıt ekleme ekranı
+---
 
-## Ekran Görüntüleri
+## 📱 Ekranlar
 
-### Cihaz Bilgileri
-![Main](screenshots/main.png)
+- **Main Screen**: Karşılama ve uygulama başlangıcı
+- **Katalog**: Kayıtlı uygulamaların uygunluk sonuçları
+- **Detay**: Seçilen uygulamanın cihazla karşılaştırılması
+- **Ekle**: Yeni uygulama/oyun gereksinimi ekleme
 
-### Katalog / Uygunluk Sonuçları
-![List](screenshots/list.png)
+---
 
-### Yeni Kayıt Ekle
-![Add](screenshots/add.png)
+## 🖼️ Ekran Görüntüleri
 
+![Karşılama](screenshots/Karsilama.png)
+![Katalog](screenshots/Katalog.png)
+![Detay](screenshots/KatalogDetay.png)
+![Yeni Kayıt](screenshots/UygulamaEkle.png)
 
-## Çalıştırma
-1. Android Studio ile projeyi aç
-2. Run ▶️ ile emulator veya telefon üzerinde çalıştır
+---
 
-3. ## Eklenecekler (Roadmap)
-- **API entegrasyonu (otomatik katalog):**
-  - Oyun/uygulama gereksinimlerini tek tek elle girmek yerine bir API üzerinden otomatik çekme
-  - Kategori/arama/filtreleme (örn. FPS, RPG, araçlar, sosyal medya vb.)
-  - Offline kullanım için cache + son senkron zamanı bilgisi
+## 🚀 Çalıştırma
 
-- **UI/UX geliştirmeleri (görünüş & kullanım kolaylığı):**
-  - Daha modern ekran tasarımı (Material Design bileşenleri, daha temiz tipografi/boşluk)
-  - Durumlara göre net görsel geri bildirim (Uygun / Sınırda / Uygun Değil için badge/ikon/renk)
-  - Liste ekranında kart görünümü, arama çubuğu ve sıralama (RAM/Depolama/SDK’ya göre)
+1. Projeyi Android Studio ile açın
+2. Gerekli bağımlılıkların yüklenmesini bekleyin
+3. `Run ▶️` ile emulator veya gerçek cihazda çalıştırın
 
-- **Gelişmiş uygunluk değerlendirmesi:**
-  - “Sınırda” eşiğini kullanıcı ayarlayabilsin (örn. %10 tolerans)
-  - Gereksinimlere ek alanlar: CPU mimarisi, GPU/GL ES, ekran çözünürlüğü, Android sürümü
+---
 
-- **Kalite & sürdürülebilirlik:**
-  - Basit testler ve hata durumlarında kullanıcıya düzgün mesajlar
-  - README’ye kısa demo video/gif ekleme
+## 🗺️ Roadmap (Planlanan)
 
+- API entegrasyonu ile otomatik gereksinim verisi çekme
+- Kategori, arama ve filtreleme (oyun türleri, araçlar, sosyal vb.)
+- Offline kullanım için cache ve senkronizasyon bilgisi
+- Daha gelişmiş uygunluk değerlendirmesi (tolerans, ek donanım bilgileri)
+- UI/UX iyileştirmeleri ve görsel geri bildirimler
+- Demo video veya GIF eklenmesi
+
+---
+
+@yaziyorulasilamiyor
