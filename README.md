@@ -105,4 +105,8 @@ amaçlanmaktadır.
 
 ---
 
+> This project is shared for educational and portfolio purposes.
+> The concept and implementation belong to the author.
+
+
 @yaziyorulasilamiyor
