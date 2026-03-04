@@ -89,17 +89,16 @@ amaçlanmaktadır.
 ## 🚀 Çalıştırma
 
 1. Projeyi Android Studio ile açın
-2. Gerekli bağımlılıkların yüklenmesini bekleyin
-3. `Run ▶️` ile emulator veya gerçek cihazda çalıştırın
+2. `Run ▶️` ile emulator veya gerçek cihazda çalıştırın
 
 ---
 
 ## 🗺️ Roadmap (Planlanan)
 
 - API entegrasyonu ile otomatik gereksinim verisi çekme
-- Kategori, arama ve filtreleme (oyun türleri, araçlar, sosyal vb.)
+- Kategori, arama ve filtreleme
 - Offline kullanım için cache ve senkronizasyon bilgisi
-- Daha gelişmiş uygunluk değerlendirmesi (tolerans, ek donanım bilgileri)
+- Daha gelişmiş uygunluk değerlendirmesi 
 - UI/UX iyileştirmeleri ve görsel geri bildirimler
 - Demo video veya GIF eklenmesi
 
